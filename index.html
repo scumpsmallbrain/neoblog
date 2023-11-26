@@ -1,0 +1,31 @@
+<!--         ~ NEOBLOG static blog template ~
+        coded with love by scump smallbrain @2023	
+            github.com/scumpsmallbrain/neoblog		-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scump's blog layout</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<script src="funcs.js"></script>
+	<script src="blog.js"></script>
+</head>
+<body>
+	<wrapper-center x-data="data()">
+		<nav x-data="get_nav(blog)">
+		</nav>
+		<main>	
+			<template x-for="post in blog.posts">
+				<article>
+					<post-header>
+						<post-dat x-text="post.display_dat"></post-dat>
+						<post-new x-show="is_new(post, blog.options.days_till_new_is_old)"><img src="graphix/new.gif" alt="new!"></post-new>
+					</post-header>
+					<post-main x-html="post.content"></post-main>
+				</article>
+			</template>
+		</main>
+	</wrapper-center>
+</body>
+</html>

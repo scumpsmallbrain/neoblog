@@ -1,0 +1,25 @@
+options:
+  # how many days to wait before marking a post as not new
+  days_till_new_is_old: 30
+  # items to display per page (TODO)
+  items_per_page: 12
+
+
+# --- POST DATA ---
+# display_dat : date & time to be displayed in post header
+# true_date   : (YYYY-MM-DD) date used by the script to
+#               calculate which posts should to mark as "new".
+# content     : raw HTML to be displayed on each post.
+#               remember to use the '|' character to denote
+#               multiline text.
+posts:
+  - display_dat: 11/9/2023 9 PM ET
+    true_date: 2023-11-09
+    content: |
+      <h1>this is an example post</h1>
+      <p> i love pizza!
+  - display_dat: 10/9/2023 7 PM ET
+    true_date: 2023-10-09
+    content: |
+        <h1>going to market</h1>
+        <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum ex amet blanditiis modi ullam nostrum enim est vel impedit veniam, quia aliquid sequi fugiat voluptates, corporis pariatur quos cumque. Vitae!
