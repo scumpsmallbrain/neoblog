@@ -4,6 +4,22 @@ wrapper-center {
 	width: 350px;
 	margin: auto;
 }
+neoblog-nav {
+	width: 75px;
+	display: grid;
+	margin: 20px auto;
+	grid-template-columns: 1fr 1fr 1fr;
+	& button.left {
+		grid-column: 1;
+	}
+	& span.current {
+		grid-column: 2;
+		text-align: center;
+	}
+	& button.right {
+		grid-column: 3;
+	}
+}
 article {
 	margin: 10px 0;
 	border: 1px solid;

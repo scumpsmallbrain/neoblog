@@ -2,7 +2,7 @@ options:
   # how many days to wait before marking a post as not new
   days_till_new_is_old: 30
   # items to display per page (TODO)
-  items_per_page: 12
+  items_per_page: 6
 
 
 # --- POST DATA ---

@@ -1,5 +1,5 @@
 <!--         ~ NEOBLOG static blog template ~
-        coded with love by scump smallbrain @2023	
+        coded with love by scump smallbrain @2023-2024	
             github.com/scumpsmallbrain/neoblog		-->
 <!DOCTYPE html>
 <html>
@@ -13,10 +13,28 @@
 </head>
 <body>
 	<wrapper-center x-data="data()">
-		<nav x-data="get_nav(blog)">
-		</nav>
-		<main>	
-			<template x-for="post in blog.posts">
+		<main>
+			<neoblog-nav class="top"
+				x-show="pages.length > 1"
+				>
+					<button class="left"
+						x-show="current > 0"
+						x-on:click="current--; window.scrollTo(0,0)"
+						>
+							←
+					</button>
+					<span class="current"
+						x-text="current + 1"
+						>
+					</span>
+					<button class="right"
+						x-show="current + 1 < pages.length"
+						x-on:click="current++; window.scrollTo(0,0)"
+						>
+							→
+					</button>
+			</neoblog-nav>
+			<template x-for="post in pages[current]">
 				<article>
 					<post-header>
 						<post-dat x-text="post.display_dat"></post-dat>
@@ -25,6 +43,8 @@
 					<post-main x-html="post.content"></post-main>
 				</article>
 			</template>
+			<neoblog-nav class="bottom" x-html="document.querySelector('neoblog-nav.top').innerHTML" x-show="pages.length > 1">
+			</neoblog-nav>
 		</main>
 	</wrapper-center>
 </body>

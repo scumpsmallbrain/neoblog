@@ -1,19 +1,19 @@
 # neoblog - a dynamic miniblog template for static sites  
-*v0.1 -- alpha*
+*v0.2 -- beta*
 
-NEOBLOG is a javascript-enhanced version of the "miniblog" template i created for my neocities site, [scumpsmallbrain.neocities.org](https://scumpsmallbrain.neocities.org). it uses [Alpine.js](https://alpinejs.dev/) for simple reactivity in only a few lines of code with little javascript overhead.
+NEOBLOG is a javascript-enhanced version of the "miniblog" template i created for my neocities site, [scumpsmallbrain.neocities.org](https://scumpsmallbrain.neocities.org). it uses [Alpine.js](https://alpinejs.dev/) for simple reactivity with little javascript overhead.
 
 ## how 2 miniblog like me
 
-miniblogs are a great way to post updates to your neocities page or other static site.
+miniblogs are a great way to post updates to your neocities page or other static site!
 
 - the blog stays in its own self-contained folder
 - posts are tiny and meant to fit within an iframe on your main site
 - write posts in your own html
 
-in the past, this was done by manually copying an html template to a static page for every post. this is an inefficient way of storing data and makes for a pain when trying to paginate.
+in the past, i did this by manually copying an html template to a static page for every post. this is an inefficient way of storing data and makes for a pain when trying to paginate.
 
-with NEOBLOG, posts are stored in an easy-to-read yaml file. ~~they paginate automatically~~ (unimplimented in alpha) and posts from less than a certain number of days ago are automatically decorated with a little "new!" sticker.
+with NEOBLOG, all post data is stored in an easy-to-read yaml file. your blog paginates automatically and posts from less than a certain number of days ago are automatically decorated with a little "new!" sticker.
 
 ## how 2 use
 
